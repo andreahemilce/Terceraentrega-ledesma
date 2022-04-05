@@ -1,0 +1,32 @@
+$colores: (
+    1:#000000, 
+    2:white,
+    3:#E1EFF1,
+    4:#B8C2C8,
+    5:#5C6B73,
+    6:#253237,
+    7:#5D0387,
+);
+
+$tamañodefuente: (
+    1:14px,
+    2:18px,
+    3:20px,
+    4:24px,
+    5:28px,
+    6:30px,
+    7:40px,
+    8:16px,
+);
+
+@mixin flex ($display, $horizontal, $vertical) {
+    display: $display ;
+    flex-direction:$horizontal ;
+    justify-content: $vertical ;
+}
+
+@mixin flex2 ($display, $horizontal, $items){
+    display: $display ;
+    flex-direction:$horizontal ;
+    align-items: $items ;
+}

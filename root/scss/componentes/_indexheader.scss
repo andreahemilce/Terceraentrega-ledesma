@@ -1,0 +1,35 @@
+/*grillas index*/
+.gridContainer{
+    display: grid;
+    grid-template-rows: 451px 1000px 500px 280px;
+}
+
+/*header index*/ 
+
+.masthead{
+    background-size: cover;
+    min-height: 40vh;
+    position: relative;
+    color: map-get($colores , 1 );
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.titulo{
+    font-size: 3rem;  
+}
+.color-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+
+@media (max-width: 768px) {
+    .masthead{
+        min-height: 30vh;
+    }
+
+    .titulo{
+        font-size: 1rem
+    }
+}

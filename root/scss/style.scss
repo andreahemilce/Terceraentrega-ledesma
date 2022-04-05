@@ -1,0 +1,542 @@
+@import "./base/variables";
+@import "./componentes/indexheader";
+@import "./componentes/botones";
+@import "./componentes/cardsindex";
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+.subtitulo {    
+    margin: 110px 50px ; 
+    color: map-get($colores, 5);
+    font-size: map-get($tamañodefuente, 7 );
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/*section index con flexbox*/
+.sobremi { 
+background-color: map-get($colores, 3);
+@include flex2 (flex,row,center)
+}
+
+.sobremi img{
+border-radius: 20px;
+margin: 80px 50px 80px 50px;
+}
+
+.sobremi div {
+    @include flex2 (flex,column,center)
+}
+
+
+
+.textosection{ 
+    font-size: map-get($tamañodefuente, 4);
+    font-family: 'Zilla Slab', serif;
+    margin-bottom: 75px;
+    margin-right: 50px;
+}
+
+
+
+
+/*page conoceme* style*/
+.nombreCv{
+    color: map-get($colores, 5);
+    font-size: map-get($tamañodefuente, 7);
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+}
+.carrera{
+    font-weight: bold;
+    font-size: map-get($tamañodefuente, 6);
+    letter-spacing: 0.2em;
+    font-family: 'Zilla Slab', serif;
+}
+
+.titulosh3{
+    font-size: map-get($tamañodefuente, 5);
+    font-weight: bold;
+    font-family: 'Zilla Slab', serif;
+}
+.textos{
+    font-size: map-get($tamañodefuente, 4);
+    font-family: 'Zilla Slab', serif;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.contenedorcompetencias{
+    width: 350px;
+    height: 500px;
+    margin-left: 50px;
+    background-color: map-get($colores, 3);
+}
+
+.imagencv{
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+/*page conoceme - grilla*/
+
+.grid-conoceme{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+.a{grid-area:header;}
+.b{grid-area:main;
+    margin: 0px 50px;  
+}
+.c{grid-area:aside;}
+.d{grid-area:footer;}
+
+/*page-proyectos*/
+
+.surprise{
+    font-family: 'Zilla Slab', serif;
+    font-size: 80px;
+    color: map-get($colores , 7 );
+    text-align: center;
+  @include flex (flex,row,center);
+    margin: 50px;
+}
+
+.titulosurp {
+    font-family: 'Zilla Slab', serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: map-get($colores , 7 );
+    text-align: center;
+    margin: 50px;
+
+}
+
+.subt2 {
+    font-family: 'Zilla Slab', serif;
+    font-size: map-get($tamañodefuente , 7 );
+    color: map-get($colores , 7);
+    font-weight: bold;
+    margin: 50px;
+    text-align: center;
+}
+
+
+.surpriseBanner {
+    background-image: url(../img/confeti.png);
+    height: 604px;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+/*grid page-proyectos*/
+.gridproyectos{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 280px;
+}
+
+.gridproyectos section{
+    justify-self: center;
+    align-self: center;
+}
+
+.imagenfiesta{
+    @include flex (flex,row,center);
+}
+
+/*blog-style*/
+
+.bannerblog{
+    background-image: url(../img/blog.jpg);
+    background-size: cover;
+    height: 601px;
+}
+
+.contenedorblog {
+    background-color: map-get($colores , 3);
+    height: 400px;
+    margin: 50px;
+    @include flex2 (flex,row,center);
+    
+}
+
+.contenedorblog img{ 
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+.h4{
+    font-size: map-get($tamañodefuente, 5);
+    font-weight: bold;
+    font-family: 'Zilla Slab', serif;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.contenedortitulos{
+    height: 790;
+}
+
+/*blog grid*/
+.gridblog{
+    display: grid;
+    grid-template-rows: 600px 1500px 280px;
+}
+
+/*daily challenge*/
+.contenedordias {
+    background-color: map-get($colores, 3) ;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 map-get($colores, 5);
+    height: 200px;
+    margin: 50px;
+    
+}
+
+.h6 {
+    font-size: map-get($tamañodefuente, 4);
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.textos2{
+    font-size: map-get($tamañodefuente, 4);
+    font-family: 'Zilla Slab', serif;
+    margin: 10px;
+}
+
+
+
+/*Daily challenge grid*/
+.gridDaily {
+    display: grid;
+    grid-template-rows: 600px 3000px 280px ;
+}
+
+.gridDaily main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
+/*mobile style- index*/
+@media only screen and (max-width: 480px) {
+    .gridContainer{
+        display: grid;
+        grid-template-rows: 290px 1000px 250px 80px;
+        justify-content: center;
+    }
+    
+
+    
+   
+    .margenimg{
+        margin-left: 16px;
+    }
+    .margenimg img{ 
+        height: 24px;
+        width: 24px;
+    } 
+    
+    .masthead{
+        background-size: cover;
+        min-height: 40vh;
+        position: relative;
+        color: map-get($colores, 1);
+        text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    }
+    
+    .titulo{
+        font-size: 1rem;  
+    }
+
+
+    .subtitulo {    
+        margin: 50px 16px ; 
+        color: map-get($colores, 5);
+        font-size: map-get($tamañodefuente, 2);
+        font-family: 'Zilla Slab', serif;
+        font-weight: bold;
+    }
+
+  
+
+    /*section index con flexbox*/
+    .sobremi { 
+        background-color: map-get($colores, 3);
+        @include flex2 (flex,row,center);
+        height: 150px;
+        margin-bottom: 100px;
+    }
+        
+    .sobremi img{
+        width: 100px;
+        height: 100px;
+
+        border-radius: 20px;
+        margin: 20px 10px 20px 10px;
+    }
+    
+    .sobremi div {
+        @include flex2 (flex,column,center)
+    }
+    
+    
+    
+    .textosection{ 
+        font-size: map-get($tamañodefuente, 1);
+        font-family: 'Zilla Slab', serif;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        width: 250px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
+    }
+
+    
+
+    /*media para conoceme*/
+    /*page conoceme* style*/
+    .nombreCv{
+        color: map-get($colores , 6 );
+        font-size: map-get($tamañodefuente, 4);
+        font-family: 'Zilla Slab', serif;
+        font-weight: bold;
+    }
+    .carrera{
+        font-weight: bold;
+        font-size: map-get($tamañodefuente, 1);
+        letter-spacing: 0.2em;
+        font-family: 'Zilla Slab', serif;
+    }
+
+    .titulosh3{
+        font-size: map-get($tamañodefuente, 1);
+        font-weight: bold;
+        font-family: 'Zilla Slab', serif;
+    }
+    .textos{
+        font-size: map-get($tamañodefuente, 1);
+        font-family: 'Zilla Slab', serif;
+        margin-left: 16px;
+        margin-bottom: 25px;
+    }
+
+    .contenedorcompetencias{
+        width: 326px;
+        height: 250px;
+        margin-left: 16px;
+        background-color: map-get($colores , 7 );
+    }
+
+    .imagencv{
+        height: 158px;
+        width: 156px;
+        border-radius: 20px;
+        margin-left: 16px;
+        margin-bottom: 16px;
+    }
+
+    /*page conoceme - grilla*/
+
+    .grid-conoceme{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "aside aside"
+        "footer footer";
+    }
+
+    .a{grid-area:header;}
+    .b{grid-area:main;
+        margin: 0px 16px;  
+    }
+    .c{grid-area:aside;}
+    .d{grid-area:footer;}
+
+    /*MEDIA PARA BLOG*/
+
+    /*blog-style*/
+
+    .bannerblog{
+        background-image: url(../img/blog.jpg);
+        background-size: cover;
+        height: 300px;
+        width: auto;
+    }
+
+    .contenedorblog {
+        background-color: map-get($colores, 3);
+        height: 250px;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    
+
+    .contenedorblog div img{ 
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 20px;
+        object-fit: contain;
+        width: auto;
+        max-height: 100px;
+    }
+    .h4{
+        font-size: map-get($tamañodefuente, 8);
+        font-weight: bold;
+        font-family: 'Zilla Slab', serif;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .contenedortitulos{
+        height: 100px;
+    }
+
+    /*blog grid*/
+    .gridblog{
+        display: grid;
+        grid-template-rows: 400px 750px 150px;
+    }
+
+    /*daily challenge*/
+    .contenedordias {
+        background-color: map-get($colores, 3) ;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px 0 map-get($colores, 5);
+        height: 100 px;
+        width: auto;
+        margin: 20px
+        
+    }
+
+    .h6 {
+        font-size: map-get($tamañodefuente, 1);
+        font-family: 'Zilla Slab', serif;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .textos2{
+        font-size: map-get($tamañodefuente, 1);
+        font-family: 'Zilla Slab', serif;
+        margin: 5px;
+    }
+
+    /*Daily challenge grid*/
+    .gridDaily {
+        display: grid;
+        grid-template-rows: 250 px 1500px 150px ;
+    }
+
+    .gridDaily main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /*page-proyectos*/
+
+    .surprise{
+        font-family: 'Zilla Slab', serif;
+        font-size: 50px;
+        color: map-get($colores , 7 );
+        text-align: center;
+        @include flex (flex,row,center);
+        margin: 50px;
+    }
+
+    .titulosurp {
+        font-family: 'Zilla Slab', serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: map-get($colores , 7 );
+        text-align: center;
+        margin: 50px;
+    
+    }
+    
+
+    .subt2 {
+        font-family: 'Zilla Slab', serif;
+        font-size: map-get($tamañodefuente , 3 );
+        color: map-get($colores , 7);
+        font-weight: bold;
+        margin: 50px;
+        text-align: center;
+    }
+    
+
+    .surpriseBanner {
+        background-image: url(../img/confeti.png);
+        height: 300px;
+        width: 200;
+        margin-bottom: 15px;
+    }
+
+   
+    /*grid page-proyectos*/
+    .gridproyectos{
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr 150px;
+    }
+
+    .gridproyectos section{
+        justify-self: center;
+        align-self: center;
+    }
+
+   
+
+
+    .imagenfiesta{
+        @include flex (flex,row,center);
+       
+        
+        
+    }
+
+    
+
+}
+
+
+/*animaciones*/
+
+.contenedorfooter div a:hover{
+    transform: scale(1.5);
+    transition: all 1s;
+}
+
+.barradenavegación ul li a:hover{
+    color: rgb(71, 85, 216);
+}
+

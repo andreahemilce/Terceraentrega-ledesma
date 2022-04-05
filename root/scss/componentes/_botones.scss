@@ -1,0 +1,36 @@
+.boton{
+    background-color: map-get($colores , 5 );
+    color: map-get($colores , 2 );
+    border-radius: 20px;
+    font-size: map-get($tamañodefuente , 5 );
+    font-weight: bold;
+    text-align: center;
+    padding: 45px 300px;
+    text-decoration: none;
+    font-family: 'Zilla Slab', serif;
+}
+
+.boton:hover{
+    transition: all 1s;
+    background-color: rgb(104, 144, 197);
+    
+}
+
+
+/*mobile style*/
+@media only screen and (max-width: 480px) {
+
+    .boton{
+        background-color: map-get($colores , 5 );
+        width: 250;
+        height: 30;
+        color: white;
+        border-radius: 20px;
+        font-size: map-get($tamañodefuente , 1 );
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-family: 'Zilla Slab', serif;
+    }
+}

@@ -1,0 +1,72 @@
+/*ordenar tarjetas index con grillas y fexbox*/
+.cardsgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height:1000px ;
+    justify-items: center;
+    margin: auto;
+}
+
+.cardsgrid .cards{
+    width: 445px;
+    height: 580px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 50px;
+    text-align: center;
+    box-shadow: 0 10px 10px 0 map-get($colores, 1 );
+    display: grid;
+}
+
+.cardsgrid .cards img {
+    width: 445px ;
+    height: 445px;
+}
+
+.cardsgrid .cards a{
+    font-size: map-get($tamañodefuente, 5 );
+    text-decoration: none;
+    color: map-get($colores, 1 );
+    font-family: 'Zilla Slab', serif;
+    margin: 50px;
+}
+
+.margenimg{
+    margin-left: 50px;
+}
+
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .cardsgrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin: auto;
+    }
+
+    .cardsgrid .cards{
+        width: 216px;
+        height: 230px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 25px;
+        text-align: center;
+        box-shadow: 0 10px 10px 0 map-get($colores, 5);
+        display: grid;
+    }
+
+
+    .cardsgrid .cards img {
+        width: 216px ;
+        height: 160px;
+    }
+
+    .cardsgrid .cards a{
+        font-size: map-get($tamañodefuente, 8);
+        text-decoration: none;
+        color: map-get($tamañodefuente, 1);
+        font-family: 'Zilla Slab', serif;
+        margin: 20px;
+    }
+}
+
